@@ -27,25 +27,33 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 "#####プラグイン#####
 NeoBundle 'itchyny/lightline.vim' "見やすいステータスライン
+NeoBundle 'wakatime/vim-wakatime' "作業ログ
+
+"補完
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
+
 "インデント可視化
 NeoBundle 'Yggdroot/indentLine'
 let g:indentLine_faster = 1
 nmap <silent><Leader>i :<C-u>IndentLinesToggle<CR>
+
 "行末のスペースを可視化
 NeoBundle 'bronson/vim-trailing-whitespace'
 if neobundle#tap('vim-trailing-whitespace')
     " uniteでスペースが表示されるので、設定でOFFにする。
     let g:extra_whitespace_ignored_filetypes = ['unite']
 endif
+
 "ディレクトリツリーからファイルを選択
 NeoBundle 'Shougo/vimfiler.vim'
 nnoremap <leader>e :VimFilerExplore -split -winwidth=30 -find -no-quit<Cr>
+
 "if等の終了宣言を自動挿入
 NeoBundleLazy 'tpope/vim-endwise', {
   \ 'autoload' : { 'insert' : 1,}}
+
 "true/falseを+/-で切り替え
 NeoBundle 'AndrewRadev/switch.vim'
 nmap + :Switch<CR>
@@ -60,7 +68,7 @@ call neobundle#end()
 
 filetype plugin indent on
 
-" 未インストールのプラグインがある場合、インストールするかどうかを尋ねてくれるようにする設定
+" 未インストールのプラグインがある場合、インストールするかどうかを尋ねてくれる
 NeoBundleCheck
 
 "-------------------------
