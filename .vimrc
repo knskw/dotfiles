@@ -96,6 +96,10 @@ set smartindent
 "ファイルタイプ関係
 syntax on "コードの色分け
 
+"ノーマルモード時だけ；と：を入れ替える（us配列用）
+nnoremap ; :
+nnoremap : ;
+
 "#####検索設定#####
 set incsearch
 set ignorecase "大文字/小文字の区別なく検索する
