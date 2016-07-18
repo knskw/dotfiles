@@ -107,3 +107,9 @@ set smartcase "検索文字列に大文字が含まれている場合は区別�
 set hlsearch "検索文字をハイライト表示
 set wrapscan "検索時に最後まで行ったら最初に戻る
 
+"tmp関連
+"set directory=~/.vim/tmp
+set backupdir=~/.vim/tmp
+"set viminfo+=n
+set undodir=~/.vim/tmp
+
